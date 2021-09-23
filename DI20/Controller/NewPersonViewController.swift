@@ -42,12 +42,7 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate, UIPickerVi
         hairsColorPicker.delegate = self
         eyesColorPicker.dataSource = self
         hairsColorPicker.dataSource = self
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print(People.all.forEach{(people) in
-            print("\(String(describing: people.firstname))")
-        })
+        self.navigationController?.isNavigationBarHidden = false
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
             closeKeyboard()
@@ -106,7 +101,6 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate, UIPickerVi
         }
     }
     @IBAction func validateNewPerson(_ sender: UIButton) {
-        print(test)
         registerNewPeople(newPerson: test)
     }
     @objc private func closeKeyboard() {

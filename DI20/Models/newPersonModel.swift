@@ -18,13 +18,13 @@ public struct newPerson: Loopable {
     var sex: Bool = false
     var smile: Bool = false
     var strong: Bool = false
-    var tall: Bool = false
+    var tall: Int32 = 0
     var voice: Bool = false
 }
 public func registerNewPeople(newPerson: newPerson){
     let newPeople = People(context: AppDelegate.viewContext)
     newPeople.firstname = newPerson.firstname
-    newPeople.big = newPerson.big
+//    newPeople.big = newPerson.big
     newPeople.eyesColor = newPerson.eyesColor
     newPeople.glasses = newPerson.glasses
     newPeople.hairs = newPerson.hairs

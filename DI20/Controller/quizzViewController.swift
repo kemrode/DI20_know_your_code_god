@@ -18,6 +18,8 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var proposalLBFour: UILabel!
     @IBOutlet weak var firstnamePicker: UIPickerView!
     @IBOutlet weak var validateBtn: UIButton!
+    @IBOutlet weak var firstClue: UILabel!
+    
     var testPredicate: NSPredicate?
     var arrayLable: Array<UILabel> = []
     var dictSelectedPerson: Dictionary<String,String> = [:]
@@ -30,6 +32,7 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         firstnamePicker.delegate = self
         firstnamePicker.dataSource = self
         validateBtn.layer.cornerRadius = 35
+        self.navigationController?.isNavigationBarHidden = false
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -42,6 +45,7 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         personStructConstruction(peopleModel: data)
         indicationSettting(peopleModel: data)
         gamerAnswer = arrayName.first
+        self.settingFirstClue(firstClue: firstClue)
     }
     private func randomInPeople() -> String {
         arrayName = self.creatingArrayName()
@@ -62,14 +66,15 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     return result!
     }
     private func personStructConstruction(peopleModel: People){
-        dictSelectedPerson["big"] = (peopleModel.big) ? "j'ai un peu d'embompoint" : "je suis légèrement maigrichon"
-        dictSelectedPerson["eyesColor"] = peopleModel.eyesColor
+//        dictSelectedPerson["big"] = (peopleModel.big) ? "j'ai un peu d'embompoint" : "je suis légèrement maigrichon"
+        dictSelectedPerson["eyesColor"] = "J'ai des yeux \(peopleModel.eyesColor ?? "colorés, n'est-ce pas ?")"
         dictSelectedPerson["glasses"] = (peopleModel.glasses) ? "je porte des lunettes" : "j'suis pas bigleux, moi"
         dictSelectedPerson["hairs"] = "mes cheveux sont \(peopleModel.hairs ?? "d'une certaine couleur")"
         dictSelectedPerson["sex"] = (peopleModel.sex) ? "Je suis un mec" : "je suis une femme"
         dictSelectedPerson["smile"] = (peopleModel.smile) ? "Je suis souriant" : "qu'est-ce qu'un sourire ?"
-        dictSelectedPerson["strong"] = (peopleModel.strong) ? "Je suis du genre musclé" : "mes muscles sont plus timides"
-        dictSelectedPerson["tall"] = (peopleModel.tall) ? "je suis plutôt grand" : "je ne suis pas des plus grands"
+        dictSelectedPerson["strong"] = (peopleModel.strong) ? "Je suis du genre musclé" : "tendance Nutella !"
+//        dictSelectedPerson["tall"] = (peopleModel.tall) ? "je suis plutôt grand" : "je ne suis pas des plus grands"
+        dictSelectedPerson["tall"] = "Je mesure \(peopleModel.tall)cm"
         dictSelectedPerson["voice"] = (peopleModel.voice) ? "j'ai une voix grave" : "ma voix est plutôt aiguë"
     }
     private func addArrayLable() {
@@ -84,7 +89,12 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             settingProposal(labelToSet: element)
         }
         answer = peopleModel.firstname
-        print(answer!)
+    }
+    private func settingFirstClue(firstClue: UILabel){
+        firstClue.isUserInteractionEnabled = false
+        let element = dictSelectedPerson.randomElement()
+        firstClue.text = element?.value
+        dictSelectedPerson.removeValue(forKey: element!.key)
     }
     private func settingProposal(labelToSet: UILabel) {
         labelToSet.isUserInteractionEnabled = true
