@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="People" representedClassName=".People" syncable="YES" codeGenerationType="category">
+        <attribute name="beard" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="big" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="eyesColor" optional="YES" attributeType="String"/>
+        <attribute name="firstname" optional="YES" attributeType="String"/>
+        <attribute name="glasses" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="hairs" optional="YES" attributeType="String"/>
+        <attribute name="sex" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="smile" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="strong" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="tall" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="voice" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="People" positionX="-63" positionY="-18" width="128" height="194"/>
+    </elements>
+</model>
