@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A6087A926FD128A00FA91EC /* StandardButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6087A826FD128A00FA91EC /* StandardButtonView.swift */; };
 		0AC827A826F33D310005C29C /* NewPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC827A726F33D310005C29C /* NewPersonViewController.swift */; };
 		0AC827B126F37CA70005C29C /* newPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC827B026F37CA70005C29C /* newPersonModel.swift */; };
 		0AE42AE226E25236009506C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE42AE126E25236009506C1 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A6087A826FD128A00FA91EC /* StandardButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonView.swift; sourceTree = "<group>"; };
 		0AC827A726F33D310005C29C /* NewPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPersonViewController.swift; sourceTree = "<group>"; };
 		0AC827B026F37CA70005C29C /* newPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPersonModel.swift; sourceTree = "<group>"; };
 		0AE42ADE26E25236009506C1 /* DI20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DI20.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 		0AE42AF926E25824009506C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A6087A826FD128A00FA91EC /* StandardButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AC827A826F33D310005C29C /* NewPersonViewController.swift in Sources */,
+				0A6087A926FD128A00FA91EC /* StandardButtonView.swift in Sources */,
 				0AC827B126F37CA70005C29C /* newPersonModel.swift in Sources */,
 				0AE42AEC26E25236009506C1 /* DI20.xcdatamodeld in Sources */,
 				0AE42AE626E25236009506C1 /* ViewController.swift in Sources */,

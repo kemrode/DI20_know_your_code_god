@@ -22,12 +22,14 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var arrayLable: Array<UILabel> = []
     var dictSelectedPerson: Dictionary<String,String> = [:]
     var arrayName: [String] = []
+    var gamerAnswer: String?
     var answer: String?
     var score: Int = 5
     override func viewDidLoad() {
         super.viewDidLoad()
         firstnamePicker.delegate = self
         firstnamePicker.dataSource = self
+        validateBtn.layer.cornerRadius = 35
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,7 +41,7 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let data = self.requestDataFromFirstname(nameToFind: firstname)[0]
         personStructConstruction(peopleModel: data)
         indicationSettting(peopleModel: data)
-        answer = arrayName.first
+        gamerAnswer = arrayName.first
     }
     private func randomInPeople() -> String {
         arrayName = self.creatingArrayName()
@@ -81,7 +83,8 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         arrayLable.forEach{(element) in
             settingProposal(labelToSet: element)
         }
-        dictSelectedPerson["firstname"] = peopleModel.firstname
+        answer = peopleModel.firstname
+        print(answer!)
     }
     private func settingProposal(labelToSet: UILabel) {
         labelToSet.isUserInteractionEnabled = true
@@ -105,11 +108,11 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return arrayName[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        answer = arrayName[row]
+        gamerAnswer = arrayName[row]
     }
     @IBAction func validAnswerSelected(_ sender: Any) {
-        let message = (answer == dictSelectedPerson["firstname"]) ? "Bravo, vous avez trouvé la bonne personne : \(String(describing: dictSelectedPerson["firstname"])).\nVotre score est de \(score)points" : "Dommage, il fallait trouver: \(String(describing: dictSelectedPerson["firstname"]))\nVotre score est de 0 point"
-        (answer == dictSelectedPerson["firstname"]) ? showAlert(message: message) : showAlert(message: message)
+        let message = (gamerAnswer == answer) ? "Bravo, vous avez trouvé la bonne personne : \(String(describing: answer)).\nVotre score est de \(score)points" : "Dommage, il fallait trouver: \(String(describing: answer))\nVotre score est de 0 point"
+        (gamerAnswer == answer) ? showAlert(message: message) : showAlert(message: message)
     }
     private func showAlert(message: String){
         let alertController = UIAlertController(title: "Fin de partie !", message: message, preferredStyle: .alert)
