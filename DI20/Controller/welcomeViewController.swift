@@ -35,5 +35,6 @@ class welcomeViewController: UIViewController {
     @IBAction func unwindToWelcome(segue:UIStoryboardSegue) {}
     @IBAction func cleanCoreData(_ sender: UIButton) {
         //fonction pour remettre à zéro les core data
+        deleteAllData()
     }
 }

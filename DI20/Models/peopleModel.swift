@@ -14,6 +14,7 @@ class People: NSManagedObject  {
         guard let peoples = try? AppDelegate.viewContext.fetch(request) else {return []}
         return peoples
     }
+    
 }
 
 

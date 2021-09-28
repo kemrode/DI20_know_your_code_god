@@ -40,12 +40,18 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         firstnamePicker.dataSource = self
         dictSelectedPerson = [:]
         score = 5
+        let message = "Attention, aucune donnée n'est présente dans la BDD, veuillez créer au moins un personnage, svp"
+        (arrayName == []) ? showAlertNoPerson(message: message) : creationGame()
+//        let firstname = (arrayName != []) ? randomInPeople() : showAlertNoPerson(message: message)
+    }
+    private func creationGame() {
         let firstname = randomInPeople()
         let data = self.requestDataFromFirstname(nameToFind: firstname)[0]
         personStructConstruction(peopleModel: data)
         indicationSettting(peopleModel: data)
         gamerAnswer = arrayName.first
         self.settingFirstClue(firstClue: firstClue)
+        
     }
     private func randomInPeople() -> String {
         arrayName = self.creatingArrayName()
@@ -141,11 +147,12 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         alertController.addAction(actionDismiss)
         present(alertController, animated: true, completion: nil)
     }
-//    private func reloadGame(){
-//        arrayLable.forEach{(label) in
-//            label.text = "indice mystère"
-//            label.isUserInteractionEnabled = true
-//            self.view.layoutIfNeeded()
-//        }
-//    }
+    private func showAlertNoPerson(message: String){
+        let alertController = UIAlertController(title: "Erreur", message: message, preferredStyle: .alert)
+        let actionQuit = UIAlertAction(title: "Quitter", style: .destructive) {(action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alertController.addAction(actionQuit)
+        present(alertController, animated: true, completion: nil)
+    }
 }

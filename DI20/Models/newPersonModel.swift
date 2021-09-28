@@ -36,6 +36,15 @@ public func registerNewPeople(newPerson: newPerson){
     do{try? AppDelegate.viewContext.save()}
     catch{print(error.localizedDescription)}
 }
+func deleteAllData() {
+    let allPeople = People.all
+    allPeople.forEach{people in
+        AppDelegate.viewContext.delete(people)
+    }
+//        AppDelegate.viewContext.delete(peopleList)
+    do{ try? AppDelegate.viewContext.save()}
+    catch{print(error.localizedDescription)}
+}
 protocol Loopable {
     func allProperties() throws -> [String: Any]
 }
