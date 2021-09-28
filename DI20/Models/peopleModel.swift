@@ -14,7 +14,16 @@ class People: NSManagedObject  {
         guard let peoples = try? AppDelegate.viewContext.fetch(request) else {return []}
         return peoples
     }
-    
+    func getFirstnames(_ completion: (([People])-> Void)?) {
+        let request: NSFetchRequest<People> = People.fetchRequest()
+        do {
+            let persons = try AppDelegate.viewContext.fetch(request)
+            completion?(persons)
+        } catch {
+            print(error.localizedDescription)
+            completion?([])
+        }
+    }
 }
 
 

@@ -10,6 +10,8 @@
 		0A6087A926FD128A00FA91EC /* StandardButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6087A826FD128A00FA91EC /* StandardButtonView.swift */; };
 		0AC827A826F33D310005C29C /* NewPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC827A726F33D310005C29C /* NewPersonViewController.swift */; };
 		0AC827B126F37CA70005C29C /* newPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC827B026F37CA70005C29C /* newPersonModel.swift */; };
+		0ACF6A642703AACA00F445F6 /* ListPersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF6A632703AACA00F445F6 /* ListPersonTableViewController.swift */; };
+		0ACF6A662703AC6900F445F6 /* ListPersonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF6A652703AC6900F445F6 /* ListPersonsTableViewCell.swift */; };
 		0AE42AE226E25236009506C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE42AE126E25236009506C1 /* AppDelegate.swift */; };
 		0AE42AE426E25236009506C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE42AE326E25236009506C1 /* SceneDelegate.swift */; };
 		0AE42AE626E25236009506C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE42AE526E25236009506C1 /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 		0A6087A826FD128A00FA91EC /* StandardButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonView.swift; sourceTree = "<group>"; };
 		0AC827A726F33D310005C29C /* NewPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPersonViewController.swift; sourceTree = "<group>"; };
 		0AC827B026F37CA70005C29C /* newPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPersonModel.swift; sourceTree = "<group>"; };
+		0ACF6A632703AACA00F445F6 /* ListPersonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPersonTableViewController.swift; sourceTree = "<group>"; };
+		0ACF6A652703AC6900F445F6 /* ListPersonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPersonsTableViewCell.swift; sourceTree = "<group>"; };
 		0AE42ADE26E25236009506C1 /* DI20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DI20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE42AE126E25236009506C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AE42AE326E25236009506C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				0A6087A826FD128A00FA91EC /* StandardButtonView.swift */,
+				0ACF6A652703AC6900F445F6 /* ListPersonsTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 				0AC827A726F33D310005C29C /* NewPersonViewController.swift */,
 				0AE42AFE26E25DB4009506C1 /* welcomeViewController.swift */,
 				0AE42B0026E25E3D009506C1 /* quizzViewController.swift */,
+				0ACF6A632703AACA00F445F6 /* ListPersonTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,11 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACF6A642703AACA00F445F6 /* ListPersonTableViewController.swift in Sources */,
 				0AC827A826F33D310005C29C /* NewPersonViewController.swift in Sources */,
 				0A6087A926FD128A00FA91EC /* StandardButtonView.swift in Sources */,
 				0AC827B126F37CA70005C29C /* newPersonModel.swift in Sources */,
 				0AE42AEC26E25236009506C1 /* DI20.xcdatamodeld in Sources */,
 				0AE42AE626E25236009506C1 /* ViewController.swift in Sources */,
+				0ACF6A662703AC6900F445F6 /* ListPersonsTableViewCell.swift in Sources */,
 				0AE42AE226E25236009506C1 /* AppDelegate.swift in Sources */,
 				0AE42AFF26E25DB4009506C1 /* welcomeViewController.swift in Sources */,
 				0AE42B0126E25E3D009506C1 /* quizzViewController.swift in Sources */,
