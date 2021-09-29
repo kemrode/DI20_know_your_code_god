@@ -9,14 +9,12 @@ import UIKit
 
 class ListPersonsTableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var peopleFirstnameLB: UILabel!
-    
-    var peopleFirstnameItem: People {
+    var peopleFirstnameItem: People! {
         didSet{
-            var persons: [People] = []
-//            AppDelegate.persistentContainer.
+            peopleFirstnameLB.text = peopleFirstnameItem.firstname
         }
     }
+    
 
 }

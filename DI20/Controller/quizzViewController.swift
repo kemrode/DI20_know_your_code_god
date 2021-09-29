@@ -20,7 +20,7 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var validateBtn: UIButton!
     @IBOutlet weak var firstClue: UILabel!
     
-    var testPredicate: NSPredicate?
+//    var testPredicate: NSPredicate?
     var arrayLable: Array<UILabel> = []
     var dictSelectedPerson: Dictionary<String,String> = [:]
     var arrayName: [String] = []
@@ -42,7 +42,6 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         score = 5
         let message = "Attention, aucune donnée n'est présente dans la BDD, veuillez créer au moins un personnage, svp"
         (arrayName == []) ? showAlertNoPerson(message: message) : creationGame()
-//        let firstname = (arrayName != []) ? randomInPeople() : showAlertNoPerson(message: message)
     }
     private func creationGame() {
         let firstname = randomInPeople()
@@ -79,7 +78,6 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         dictSelectedPerson["sex"] = (peopleModel.sex) ? "Je suis un mec" : "je suis une femme"
         dictSelectedPerson["smile"] = (peopleModel.smile) ? "Je suis souriant" : "qu'est-ce qu'un sourire ?"
         dictSelectedPerson["strong"] = (peopleModel.strong) ? "Je suis du genre musclé" : "tendance Nutella !"
-//        dictSelectedPerson["tall"] = (peopleModel.tall) ? "je suis plutôt grand" : "je ne suis pas des plus grands"
         dictSelectedPerson["tall"] = "Je mesure \(peopleModel.tall)cm"
         dictSelectedPerson["voice"] = (peopleModel.voice) ? "j'ai une voix grave" : "ma voix est plutôt aiguë"
     }

@@ -507,7 +507,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="128" id="tTV-T2-zlO" customClass="ListPersonsTableViewCell" customModule="DI20" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListPersonsTableViewCell" rowHeight="128" id="tTV-T2-zlO" customClass="ListPersonsTableViewCell" customModule="DI20" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tTV-T2-zlO" id="0VH-is-ml2">
@@ -518,7 +518,7 @@
                                             <rect key="frame" x="55" y="47" width="250" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="34" id="5mW-ya-0q9"/>
-                                                <constraint firstAttribute="width" constant="250" id="nsP-aA-oIY"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="nsP-aA-oIY"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                             <nil key="textColor"/>
@@ -526,6 +526,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E9S-bY-JRk" secondAttribute="trailing" constant="20" symbolic="YES" id="1mZ-w0-G0L"/>
                                         <constraint firstItem="E9S-bY-JRk" firstAttribute="centerY" secondItem="0VH-is-ml2" secondAttribute="centerY" id="3SK-2y-gSp"/>
                                         <constraint firstItem="E9S-bY-JRk" firstAttribute="leading" secondItem="0VH-is-ml2" secondAttribute="leadingMargin" constant="35" id="BQU-G7-3DW"/>
                                     </constraints>
