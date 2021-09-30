@@ -7,11 +7,8 @@
 
 import UIKit
 import Foundation
-
 class ListPersonTableViewController: UITableViewController {
-
     let arrayPeopleCD: [People] = People.all
-    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -25,24 +22,21 @@ class ListPersonTableViewController: UITableViewController {
         configuration.text = nameToShow.firstname
         cell.contentConfiguration = configuration
         return cell
-//        cell?.peopleFirstnameLB.text = nameToShow.firstname ?? "error : nobody to show"
-//        cell?.contentConfiguration = configuration
-//        return cell!
-        
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: "ListPersonsTableViewCell") as? ListPersonsTableViewCell {
-//            cell.peopleFirstnameLB.text = nameToShow.firstname
-//            cell.contentConfiguration = configuration
-//            return cell
-//        } else {
-//            let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-//            cell.textLabel?.text = "error : nobody to show, please add a new person"
-//            return cell
-//        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        tableView.reloadData()
+        tableView.delegate = self
+        tableView.dataSource = self
+        let arrayCheck: [People] = People.all
+        (arrayCheck == []) ? showAlertMessage() : print("all is good")
+    }
+    private func showAlertMessage() {
+        let message = "Aucun personnage n'est enregistré. Veuillez entrer des personnages pour afficher la liste."
+        let alertController = UIAlertController(title: "Erreur", message: message, preferredStyle: .alert)
+        let actionQuit = UIAlertAction(title: "Quitter", style: .destructive) {(action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alertController.addAction(actionQuit)
+        present(alertController, animated: true, completion: nil)
     }
 }
