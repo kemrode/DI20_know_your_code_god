@@ -18,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mais c'est quel dieu ça ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwu-Cb-0Yi">
-                                <rect key="frame" x="42.5" y="123" width="329" height="200"/>
+                                <rect key="frame" x="5" y="108" width="404" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="6y6-S3-Sge"/>
+                                    <constraint firstAttribute="height" constant="100" id="6y6-S3-Sge"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XQR-gk-ZAs">
-                                <rect key="frame" x="87" y="288" width="240" height="224"/>
+                                <rect key="frame" x="5" y="178" width="404" height="334"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r47-an-Fc7" customClass="StandardButtonView" customModule="DI20" customModuleProvider="target">
                                 <rect key="frame" x="57" y="782" width="300" height="75"/>
@@ -80,15 +80,18 @@
                         <constraints>
                             <constraint firstItem="Lpe-kr-cUe" firstAttribute="centerX" secondItem="0zH-h9-lVb" secondAttribute="centerX" id="0zV-8x-LRs"/>
                             <constraint firstItem="r47-an-Fc7" firstAttribute="centerX" secondItem="0zH-h9-lVb" secondAttribute="centerX" id="6G3-tJ-a62"/>
-                            <constraint firstItem="XQR-gk-ZAs" firstAttribute="top" secondItem="ieY-Vg-Mtf" secondAttribute="top" constant="200" id="76Y-8N-Mlt"/>
+                            <constraint firstItem="XQR-gk-ZAs" firstAttribute="leading" secondItem="ieY-Vg-Mtf" secondAttribute="leading" constant="5" id="6Rw-y9-eLf"/>
                             <constraint firstItem="Lpe-kr-cUe" firstAttribute="top" secondItem="XQR-gk-ZAs" secondAttribute="bottom" constant="50" id="Blx-60-wud"/>
+                            <constraint firstItem="XQR-gk-ZAs" firstAttribute="top" secondItem="uwu-Cb-0Yi" secondAttribute="bottom" constant="-30" id="EqE-01-McS"/>
                             <constraint firstItem="XQR-gk-ZAs" firstAttribute="centerX" secondItem="0zH-h9-lVb" secondAttribute="centerX" id="Icy-zv-vVQ"/>
-                            <constraint firstItem="XQR-gk-ZAs" firstAttribute="leading" secondItem="ieY-Vg-Mtf" secondAttribute="leading" constant="87" id="QaD-Ud-Jjj"/>
                             <constraint firstItem="ieY-Vg-Mtf" firstAttribute="bottom" secondItem="r47-an-Fc7" secondAttribute="bottom" constant="5" id="bkR-Yu-QzM"/>
                             <constraint firstItem="is6-ac-nX2" firstAttribute="top" secondItem="Lpe-kr-cUe" secondAttribute="bottom" constant="35" id="dYj-Xr-IiK"/>
+                            <constraint firstItem="uwu-Cb-0Yi" firstAttribute="leading" secondItem="ieY-Vg-Mtf" secondAttribute="leading" constant="5" id="eFY-6v-K69"/>
                             <constraint firstItem="uwu-Cb-0Yi" firstAttribute="centerX" secondItem="0zH-h9-lVb" secondAttribute="centerX" id="efU-oG-mly"/>
                             <constraint firstItem="r47-an-Fc7" firstAttribute="top" secondItem="is6-ac-nX2" secondAttribute="bottom" constant="35" id="rGa-uj-AhN"/>
-                            <constraint firstItem="uwu-Cb-0Yi" firstAttribute="top" secondItem="ieY-Vg-Mtf" secondAttribute="top" constant="35" id="wW9-pr-yXd"/>
+                            <constraint firstItem="ieY-Vg-Mtf" firstAttribute="trailing" secondItem="XQR-gk-ZAs" secondAttribute="trailing" constant="5" id="t8e-n7-0ex"/>
+                            <constraint firstItem="ieY-Vg-Mtf" firstAttribute="trailing" secondItem="uwu-Cb-0Yi" secondAttribute="trailing" constant="5" id="w9S-WY-Ctv"/>
+                            <constraint firstItem="uwu-Cb-0Yi" firstAttribute="top" secondItem="ieY-Vg-Mtf" secondAttribute="top" constant="20" id="wW9-pr-yXd"/>
                             <constraint firstItem="is6-ac-nX2" firstAttribute="centerX" secondItem="0zH-h9-lVb" secondAttribute="centerX" id="yRV-ij-UZZ"/>
                         </constraints>
                     </view>
@@ -98,6 +101,7 @@
                         <outlet property="newGameBtn" destination="is6-ac-nX2" id="TS4-ab-Yva"/>
                         <outlet property="newPersonBtn" destination="Lpe-kr-cUe" id="03a-9R-FfR"/>
                         <outlet property="titleLb" destination="uwu-Cb-0Yi" id="ws3-ha-Sn9"/>
+                        <outlet property="welcomeImg" destination="XQR-gk-ZAs" id="87j-pT-DwY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="il0-F3-wjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -524,14 +528,25 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="whp-6t-iCM">
+                                            <rect key="frame" x="349" y="39.5" width="50" height="49"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="W71-0g-D5i"/>
+                                                <constraint firstAttribute="width" constant="50" id="tut-Jx-khQ"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E9S-bY-JRk" secondAttribute="trailing" constant="20" symbolic="YES" id="1mZ-w0-G0L"/>
                                         <constraint firstItem="E9S-bY-JRk" firstAttribute="centerY" secondItem="0VH-is-ml2" secondAttribute="centerY" id="3SK-2y-gSp"/>
                                         <constraint firstItem="E9S-bY-JRk" firstAttribute="leading" secondItem="0VH-is-ml2" secondAttribute="leadingMargin" constant="35" id="BQU-G7-3DW"/>
+                                        <constraint firstItem="whp-6t-iCM" firstAttribute="trailing" secondItem="0VH-is-ml2" secondAttribute="trailingMargin" constant="5" id="X0l-be-xlw"/>
+                                        <constraint firstItem="whp-6t-iCM" firstAttribute="centerY" secondItem="0VH-is-ml2" secondAttribute="centerY" id="ksz-4r-2oJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="chevronImg" destination="whp-6t-iCM" id="oEe-ka-oye"/>
                                     <outlet property="peopleFirstnameLB" destination="E9S-bY-JRk" id="2pO-Fl-52F"/>
                                 </connections>
                             </tableViewCell>
@@ -549,6 +564,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.right.circle" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -20,7 +20,6 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var validateBtn: UIButton!
     @IBOutlet weak var firstClue: UILabel!
     
-//    var testPredicate: NSPredicate?
     var arrayLable: Array<UILabel> = []
     var dictSelectedPerson: Dictionary<String,String> = [:]
     var arrayName: [String] = []
@@ -29,6 +28,7 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var score: Int = 5
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.layer.backgroundColor = setBases.primaryBackgroundColor.cgColor
         firstnamePicker.delegate = self
         firstnamePicker.dataSource = self
         validateBtn.layer.cornerRadius = 35
@@ -50,7 +50,6 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         indicationSettting(peopleModel: data)
         gamerAnswer = arrayName.first
         self.settingFirstClue(firstClue: firstClue)
-        
     }
     private func randomInPeople() -> String {
         arrayName = self.creatingArrayName()
@@ -71,7 +70,6 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     return result!
     }
     private func personStructConstruction(peopleModel: People){
-//        dictSelectedPerson["big"] = (peopleModel.big) ? "j'ai un peu d'embompoint" : "je suis légèrement maigrichon"
         dictSelectedPerson["eyesColor"] = "J'ai des yeux \(peopleModel.eyesColor ?? "colorés, n'est-ce pas ?")"
         dictSelectedPerson["glasses"] = (peopleModel.glasses) ? "je porte des lunettes" : "j'suis pas bigleux, moi"
         dictSelectedPerson["hairs"] = "mes cheveux sont \(peopleModel.hairs ?? "d'une certaine couleur")"

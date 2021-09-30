@@ -22,7 +22,9 @@
 		0AE42AFF26E25DB4009506C1 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE42AFE26E25DB4009506C1 /* welcomeViewController.swift */; };
 		0AE42B0126E25E3D009506C1 /* quizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE42B0026E25E3D009506C1 /* quizzViewController.swift */; };
 		0AE42B0326E26826009506C1 /* peopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE42B0226E26826009506C1 /* peopleModel.swift */; };
-		0AEAC8612706467B00D2938D /* composing-gc11fcf544_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AEAC8602706467B00D2938D /* composing-gc11fcf544_640.jpg */; };
+		0AEAC8612706467B00D2938D /* welcomeImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AEAC8602706467B00D2938D /* welcomeImage.jpg */; };
+		0AEAC8632706485200D2938D /* setBases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEAC8622706485200D2938D /* setBases.swift */; };
+		0AEAC86627064FBB00D2938D /* JSONDecodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEAC86527064FBB00D2938D /* JSONDecodeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +45,9 @@
 		0AE42AFE26E25DB4009506C1 /* welcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		0AE42B0026E25E3D009506C1 /* quizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizzViewController.swift; sourceTree = "<group>"; };
 		0AE42B0226E26826009506C1 /* peopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peopleModel.swift; sourceTree = "<group>"; };
-		0AEAC8602706467B00D2938D /* composing-gc11fcf544_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "composing-gc11fcf544_640.jpg"; path = "../../../../../../../Downloads/composing-gc11fcf544_640.jpg"; sourceTree = "<group>"; };
+		0AEAC8602706467B00D2938D /* welcomeImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = welcomeImage.jpg; path = ../../../../../../../Downloads/welcomeImage.jpg; sourceTree = "<group>"; };
+		0AEAC8622706485200D2938D /* setBases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setBases.swift; sourceTree = "<group>"; };
+		0AEAC86527064FBB00D2938D /* JSONDecodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			children = (
 				0A6087A826FD128A00FA91EC /* StandardButtonView.swift */,
 				0ACF6A652703AC6900F445F6 /* ListPersonsTableViewCell.swift */,
+				0AEAC8622706485200D2938D /* setBases.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 		0AE42AFB26E25837009506C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0AEAC86427064F8800D2938D /* jsonDecoderControllers */,
 				0AC827A726F33D310005C29C /* NewPersonViewController.swift */,
 				0AE42AFE26E25DB4009506C1 /* welcomeViewController.swift */,
 				0AE42B0026E25E3D009506C1 /* quizzViewController.swift */,
@@ -148,9 +154,17 @@
 		0AEAC85F2706466B00D2938D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				0AEAC8602706467B00D2938D /* composing-gc11fcf544_640.jpg */,
+				0AEAC8602706467B00D2938D /* welcomeImage.jpg */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		0AEAC86427064F8800D2938D /* jsonDecoderControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0AEAC86527064FBB00D2938D /* JSONDecodeController.swift */,
+			);
+			path = jsonDecoderControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AEAC8612706467B00D2938D /* composing-gc11fcf544_640.jpg in Resources */,
+				0AEAC8612706467B00D2938D /* welcomeImage.jpg in Resources */,
 				0AE42AF126E25239009506C1 /* LaunchScreen.storyboard in Resources */,
 				0AE42AEE26E25239009506C1 /* Assets.xcassets in Resources */,
 				0AE42AE926E25236009506C1 /* Main.storyboard in Resources */,
@@ -227,12 +241,14 @@
 				0ACF6A642703AACA00F445F6 /* ListPersonTableViewController.swift in Sources */,
 				0AC827A826F33D310005C29C /* NewPersonViewController.swift in Sources */,
 				0A6087A926FD128A00FA91EC /* StandardButtonView.swift in Sources */,
+				0AEAC86627064FBB00D2938D /* JSONDecodeController.swift in Sources */,
 				0AC827B126F37CA70005C29C /* newPersonModel.swift in Sources */,
 				0AE42AEC26E25236009506C1 /* DI20.xcdatamodeld in Sources */,
 				0AE42AE626E25236009506C1 /* ViewController.swift in Sources */,
 				0ACF6A662703AC6900F445F6 /* ListPersonsTableViewCell.swift in Sources */,
 				0AE42AE226E25236009506C1 /* AppDelegate.swift in Sources */,
 				0AE42AFF26E25DB4009506C1 /* welcomeViewController.swift in Sources */,
+				0AEAC8632706485200D2938D /* setBases.swift in Sources */,
 				0AE42B0126E25E3D009506C1 /* quizzViewController.swift in Sources */,
 				0AE42B0326E26826009506C1 /* peopleModel.swift in Sources */,
 				0AE42AE426E25236009506C1 /* SceneDelegate.swift in Sources */,

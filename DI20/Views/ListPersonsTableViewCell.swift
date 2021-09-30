@@ -9,6 +9,7 @@ import UIKit
 
 class ListPersonsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var chevronImg: UIImageView!
     @IBOutlet weak var peopleFirstnameLB: UILabel!
     var peopleFirstnameItem: People! {
         didSet{

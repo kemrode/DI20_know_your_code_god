@@ -35,6 +35,9 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.layer.backgroundColor = setBases.primaryBackgroundColor.cgColor
+        validateBtn.backgroundColor = setBases.secondColor
+        validateBtn.layer.cornerRadius = 25
         let tap = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         view.addGestureRecognizer(tap)
         nameTextfield.delegate = self
