@@ -17,6 +17,7 @@ public func extractJSONData(filePath: URL) {
                 extractionValues(extract: extract, model: People(context: AppDelegate.viewContext), title: extract.key)
             }
         } catch { print(error.localizedDescription)}
+        QuizzData.dataExtracted = true
     }
 }
 private func extractionValues(extract: Dictionary<String, Any>.Element, model: NSManagedObject, title: String){

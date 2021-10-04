@@ -33,6 +33,7 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         firstnamePicker.dataSource = self
         validateBtn.layer.cornerRadius = 35
         self.navigationController?.isNavigationBarHidden = false
+        arrayName = self.creatingArrayName()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -52,14 +53,15 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         self.settingFirstClue(firstClue: firstClue)
     }
     private func randomInPeople() -> String {
-        arrayName = self.creatingArrayName()
         let name = arrayName.randomElement()
         return name!
     }
     private func creatingArrayName() -> Array<String> {
             var arrayName: [String] = []
             People.all.forEach{(person) in
-                arrayName.append(person.firstname!)
+                if person.firstname != nil {
+                    arrayName.append(person.firstname!)
+                }
             }
         return arrayName
     }
