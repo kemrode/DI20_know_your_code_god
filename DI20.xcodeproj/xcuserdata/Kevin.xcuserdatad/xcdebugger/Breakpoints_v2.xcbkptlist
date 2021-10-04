@@ -7,65 +7,177 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C414BF95-D740-49DF-981F-E1A8B1605E6D"
-            shouldBeEnabled = "Yes"
+            uuid = "ACFC81A0-3D48-4ADB-BF24-02559AED0D4B"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DI20/Models/newPersonModel.swift"
+            filePath = "DI20/Controller/jsonDecoderControllers/JSONDecodeController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "deleteAllData()"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "extractJSONData(filePath:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5CD5D1FC-5867-4516-AA8F-E5F64BF29CD5"
+            uuid = "6C4F2342-A368-479D-86B7-02C07664D5A6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DI20/Controller/ListPersonTableViewController.swift"
+            filePath = "DI20/Controller/jsonDecoderControllers/JSONDecodeController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "extractionValues(extract:model:title:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "95099A44-9F66-4495-82B8-BBEA76FA2543"
-            shouldBeEnabled = "Yes"
+            uuid = "09692401-6538-4648-A4D0-8DB900305412"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DI20/Controller/ListPersonTableViewController.swift"
+            filePath = "DI20/Controller/jsonDecoderControllers/JSONDecodeController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "tableView(_:commit:forRowAt:)"
-            landmarkType = "7">
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "parserManagedObject(itemArray:modelToParse:title:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D39AC968-8A1E-49A6-949A-FBD8D28CEF79"
+            uuid = "F93B7F5A-E5A6-4874-9952-CE81EAD13867"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DI20/Controller/jsonDecoderControllers/JSONDecodeController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "creationObject(item:model:title:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53D391FE-F6FB-4254-90E0-ABF8F47FA25A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DI20/Controller/jsonDecoderControllers/JSONDecodeController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "loopInElement(element:entity:model:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "53D391FE-F6FB-4254-90E0-ABF8F47FA25A - 636d2253c47c9c1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DI20.loopInElement(element: (key: Swift.String, value: Swift.String), entity: Swift.Dictionary&lt;Swift.String, __C.NSAttributeDescription&gt;.Keys, model: __C.NSManagedObject) -&gt; ()"
+                  moduleName = "DI20"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kevin/Desktop/prive%CC%81/presentation_08OCT21/DI20/DI20/Controller/jsonDecoderControllers/JSONDecodeController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "53D391FE-F6FB-4254-90E0-ABF8F47FA25A - 7726bf4952a713dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in DI20.loopInElement(element: (key: Swift.String, value: Swift.String), entity: Swift.Dictionary&lt;Swift.String, __C.NSAttributeDescription&gt;.Keys, model: __C.NSManagedObject) -&gt; ()"
+                  moduleName = "DI20"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kevin/Desktop/prive%CC%81/presentation_08OCT21/DI20/DI20/Controller/jsonDecoderControllers/JSONDecodeController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C366AC55-44E3-4917-B7FB-4D8BE6022CA4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DI20/Controller/jsonDecoderControllers/JSONDecodeController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "loopInElement(element:entity:model:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFB354E9-FFF6-43B5-8C88-46F989FA500F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DI20/Controller/ListPersonTableViewController.swift"
+            filePath = "DI20/helpers/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "deletePerson(_:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BFB354E9-FFF6-43B5-8C88-46F989FA500F - 5482bcd19f8ff336"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DI20.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "DI20"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kevin/Desktop/prive%CC%81/presentation_08OCT21/DI20/DI20/helpers/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1136">
+               </Location>
+               <Location
+                  uuid = "BFB354E9-FFF6-43B5-8C88-46F989FA500F - b89b97ca51f8ad1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (DI20.People) -&gt; () in DI20.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "DI20"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kevin/Desktop/prive%CC%81/presentation_08OCT21/DI20/DI20/helpers/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

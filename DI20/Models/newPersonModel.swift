@@ -9,17 +9,17 @@ import Foundation
 import UIKit
 
 public struct newPerson: Loopable {
-    var beard: Bool = false
-    var big: Bool = false
+    var beard: String = ""
+    var big: String = ""
     var eyesColor: String = ""
     var firstname: String = ""
-    var glasses: Bool = false
+    var glasses: String = ""
     var hairs: String = ""
-    var sex: Bool = false
-    var smile: Bool = false
-    var strong: Bool = false
-    var tall: Int32 = 0
-    var voice: Bool = false
+    var sex: String = ""
+    var smile: String = ""
+    var strong: String = ""
+    var tall: String = ""
+    var voice: String = ""
 }
 public func registerNewPeople(newPerson: newPerson){
     let newPeople = People(context: AppDelegate.viewContext)

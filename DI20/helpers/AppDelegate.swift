@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let path: URL = Bundle.main.url(forResource: "data", withExtension: "json")!
+        print(path)
+        extractJSONData(filePath: path)
+        People.all.forEach{(people) in
+            print(people.firstname)
+        }
         return true
     }
 

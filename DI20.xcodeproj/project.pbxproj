@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0F8FF4270B99DF00BC3EA3 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A0F8FF3270B99DF00BC3EA3 /* data.json */; };
 		0A6087A926FD128A00FA91EC /* StandardButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6087A826FD128A00FA91EC /* StandardButtonView.swift */; };
 		0AC827A826F33D310005C29C /* NewPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC827A726F33D310005C29C /* NewPersonViewController.swift */; };
 		0AC827B126F37CA70005C29C /* newPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC827B026F37CA70005C29C /* newPersonModel.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A0F8FF3270B99DF00BC3EA3 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = data.json; path = DI20/data.json; sourceTree = "<group>"; };
 		0A6087A826FD128A00FA91EC /* StandardButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonView.swift; sourceTree = "<group>"; };
 		0AC827A726F33D310005C29C /* NewPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPersonViewController.swift; sourceTree = "<group>"; };
 		0AC827B026F37CA70005C29C /* newPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPersonModel.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		0AE42AD526E25236009506C1 = {
 			isa = PBXGroup;
 			children = (
+				0A0F8FF3270B99DF00BC3EA3 /* data.json */,
 				0AE42AE026E25236009506C1 /* DI20 */,
 				0AE42ADF26E25236009506C1 /* Products */,
 			);
@@ -224,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0F8FF4270B99DF00BC3EA3 /* data.json in Resources */,
 				0AEAC8612706467B00D2938D /* welcomeImage.jpg in Resources */,
 				0AE42AF126E25239009506C1 /* LaunchScreen.storyboard in Resources */,
 				0AE42AEE26E25239009506C1 /* Assets.xcassets in Resources */,

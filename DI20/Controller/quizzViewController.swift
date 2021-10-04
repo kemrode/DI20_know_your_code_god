@@ -71,13 +71,13 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     private func personStructConstruction(peopleModel: People){
         dictSelectedPerson["eyesColor"] = "J'ai des yeux \(peopleModel.eyesColor ?? "colorés, n'est-ce pas ?")"
-        dictSelectedPerson["glasses"] = (peopleModel.glasses) ? "je porte des lunettes" : "j'suis pas bigleux, moi"
+        dictSelectedPerson["glasses"] = (peopleModel.glasses == "oui") ? "je porte des lunettes" : "j'suis pas bigleux, moi"
         dictSelectedPerson["hairs"] = "mes cheveux sont \(peopleModel.hairs ?? "d'une certaine couleur")"
-        dictSelectedPerson["sex"] = (peopleModel.sex) ? "Je suis un mec" : "je suis une femme"
-        dictSelectedPerson["smile"] = (peopleModel.smile) ? "Je suis souriant" : "qu'est-ce qu'un sourire ?"
-        dictSelectedPerson["strong"] = (peopleModel.strong) ? "Je suis du genre musclé" : "tendance Nutella !"
+        dictSelectedPerson["sex"] = (peopleModel.sex == "homme") ? "Je suis un mec" : "je suis une femme"
+        dictSelectedPerson["smile"] = (peopleModel.smile == "oui") ? "Je suis souriant" : "qu'est-ce qu'un sourire ?"
+        dictSelectedPerson["strong"] = (peopleModel.strong == "oui") ? "Je suis du genre musclé" : "tendance Nutella !"
         dictSelectedPerson["tall"] = "Je mesure \(peopleModel.tall)cm"
-        dictSelectedPerson["voice"] = (peopleModel.voice) ? "j'ai une voix grave" : "ma voix est plutôt aiguë"
+        dictSelectedPerson["voice"] = (peopleModel.voice == "oui") ? "j'ai une voix grave" : "ma voix est plutôt aiguë"
     }
     private func addArrayLable() {
         arrayLable.append(proposalLBOne)

@@ -78,28 +78,35 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate, UIPickerVi
         }
     }
     @IBAction func glassesSwitchPressed(_ sender: UISwitch) {
-        test.glasses = sender.isOn
+        test.glasses = (sender.isOn) ? "oui" : "non"
+//        test.glasses = sender.isOn
     }
     @IBAction func beardSwitchPressed(_ sender: UISwitch) {
-         test.beard = sender.isOn
+        test.beard = (sender.isOn) ? "oui" : "non"
+//         test.beard = sender.isOn
     }
     @IBAction func bigSwitchPressed(_ sender: UISwitch) {
-        test.strong = sender.isOn
+        test.strong = (sender.isOn) ? "oui" : "non"
+//        test.strong = sender.isOn
     }
     @IBAction func smileSwitchPressed(_ sender: UISwitch) {
-        test.smile = sender.isOn
+        test.smile = (sender.isOn) ? "oui" : "non"
     }
     @IBAction func sexSegmentedPressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
-        case 1: test.sex = true
-        case 2: test.sex = false
+//        case 1: test.sex = true
+//        case 2: test.sex = false
+        case 1: test.sex = "homme"
+        case 2: test.sex = "femme"
         default: return
         }
     }
     @IBAction func voiceSegmentedPressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
-        case 1: test.voice = true
-        case 2: test.voice = false
+//        case 1: test.voice = true
+//        case 2: test.voice = false
+        case 1: test.voice = "grave"
+        case 2: test.voice = "aigüe"
         default: return
         }
     }
