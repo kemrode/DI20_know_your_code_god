@@ -43,6 +43,11 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         score = 5
         let message = "Attention, aucune donnée n'est présente dans la BDD, veuillez créer au moins un personnage, svp"
         (arrayName == []) ? showAlertNoPerson(message: message) : creationGame()
+        arrayLable.forEach{(label) in
+            addShadowToBox(label: label)
+        }
+        firstnamePicker.layer.cornerRadius = 25
+        firstnamePicker.layer.backgroundColor = setBases.primaryBackgroundColor.cgColor
     }
     private func creationGame() {
         let firstname = randomInPeople()
@@ -78,7 +83,7 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         dictSelectedPerson["sex"] = (peopleModel.sex == "homme") ? "Je suis un mec" : "je suis une femme"
         dictSelectedPerson["smile"] = (peopleModel.smile == "oui") ? "Je suis souriant" : "qu'est-ce qu'un sourire ?"
         dictSelectedPerson["strong"] = (peopleModel.strong == "oui") ? "Je suis du genre musclé" : "tendance Nutella !"
-        dictSelectedPerson["tall"] = "Je mesure \(peopleModel.tall)cm"
+        dictSelectedPerson["tall"] = "Je mesure \(peopleModel.tall!)cm"
         dictSelectedPerson["voice"] = (peopleModel.voice == "oui") ? "j'ai une voix grave" : "ma voix est plutôt aiguë"
     }
     private func addArrayLable() {
@@ -97,7 +102,7 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     private func settingFirstClue(firstClue: UILabel){
         firstClue.isUserInteractionEnabled = false
         let element = dictSelectedPerson.randomElement()
-        firstClue.text = element?.value
+        firstClue.text = element!.value
         dictSelectedPerson.removeValue(forKey: element!.key)
     }
     private func settingProposal(labelToSet: UILabel) {
@@ -125,7 +130,7 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         gamerAnswer = arrayName[row]
     }
     @IBAction func validAnswerSelected(_ sender: Any) {
-        let message = (gamerAnswer == answer) ? "Bravo, vous avez trouvé la bonne personne : \(String(describing: answer)).\nVotre score est de \(score)points" : "Dommage, il fallait trouver: \(String(describing: answer))\nVotre score est de 0 point"
+        let message = (gamerAnswer! == answer!) ? "Bravo, vous avez trouvé la bonne personne : \(answer!).\nVotre score est de \(score)points" : "Dommage, il fallait trouver: \(answer!)\nVotre score est de 0 point"
         (gamerAnswer == answer) ? showAlert(message: message) : showAlert(message: message)
     }
     private func showAlert(message: String){
@@ -152,5 +157,13 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         }
         alertController.addAction(actionQuit)
         present(alertController, animated: true, completion: nil)
+    }
+    private func addShadowToBox(label: UILabel) {
+        label.layer.shadowColor = UIColor.black.cgColor
+        label.layer.shadowOpacity = 1
+        label.layer.shadowOffset = .zero
+        label.layer.shadowRadius = 10
+        label.layer.shadowPath = UIBezierPath(rect: label.bounds).cgPath
+        label.layer.cornerRadius = 25
     }
 }

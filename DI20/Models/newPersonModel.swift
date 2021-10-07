@@ -4,46 +4,43 @@
 //
 //  Created by Kevin Fichou on 16/09/2021.
 //
-
 import Foundation
 import UIKit
-
 public struct newPerson: Loopable {
-    var beard: String = ""
-    var big: String = ""
-    var eyesColor: String = ""
-    var firstname: String = ""
-    var glasses: String = ""
-    var hairs: String = ""
-    var sex: String = ""
-    var smile: String = ""
-    var strong: String = ""
-    var tall: String = ""
-    var voice: String = ""
-}
-public func registerNewPeople(newPerson: newPerson){
-    let newPeople = People(context: AppDelegate.viewContext)
-    newPeople.firstname = newPerson.firstname
-//    newPeople.big = newPerson.big
-    newPeople.eyesColor = newPerson.eyesColor
-    newPeople.glasses = newPerson.glasses
-    newPeople.hairs = newPerson.hairs
-    newPeople.sex = newPerson.sex
-    newPeople.smile = newPerson.smile
-    newPeople.strong = newPerson.strong
-    newPeople.tall = newPerson.tall
-    newPeople.voice = newPerson.voice
-    do{try? AppDelegate.viewContext.save()}
-    catch{print(error.localizedDescription)}
-}
-func deleteAllData() {
-    let allPeople = People.all
-    allPeople.forEach{people in
-        AppDelegate.viewContext.delete(people)
+    var beard: String = String()
+    var big: String = String()
+    var eyesColor: String = String()
+    var firstname: String = String()
+    var glasses: String = String()
+    var hairs: String = String()
+    var sex: String = String()
+    var smile: String = String()
+    var strong: String = String()
+    var tall: String = String()
+    var voice: String = String()
+    
+    public func registerNewPeople(newPerson: newPerson){
+        let newPeople = People(context: AppDelegate.viewContext)
+        newPeople.firstname = newPerson.firstname
+        newPeople.eyesColor = newPerson.eyesColor
+        newPeople.glasses = newPerson.glasses
+        newPeople.hairs = newPerson.hairs
+        newPeople.sex = newPerson.sex
+        newPeople.smile = newPerson.smile
+        newPeople.strong = newPerson.strong
+        newPeople.tall = newPerson.tall
+        newPeople.voice = newPerson.voice
+        do{try? AppDelegate.viewContext.save()}
+        catch{print(error.localizedDescription)}
     }
-//        AppDelegate.viewContext.delete(peopleList)
-    do{ try? AppDelegate.viewContext.save()}
-    catch{print(error.localizedDescription)}
+    public func deleteAllData() {
+        let allPeople = People.all
+        allPeople.forEach{people in
+            AppDelegate.viewContext.delete(people)
+        }
+        do{ try? AppDelegate.viewContext.save()}
+        catch{print(error.localizedDescription)}
+    }
 }
 protocol Loopable {
     func allProperties() throws -> [String: Any]

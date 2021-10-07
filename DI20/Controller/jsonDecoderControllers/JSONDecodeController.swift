@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import CoreData
-//complete after making the json file
 public func extractJSONData(filePath: URL) {
     if let data = try? Data(contentsOf: filePath) {
         do {

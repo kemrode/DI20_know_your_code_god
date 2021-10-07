@@ -10,8 +10,8 @@ import Foundation
 
 class NewPersonViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    var test = newPerson()
-    let arrayHairsPicker = ["","Noir(aile de corbeau)","Brun","Auburn","Châtain","Roux","Bond vénitien","Blond","Blanc","Poivre&Sel"]
+    var newPersonRegistered = newPerson()
+    let arrayHairsPicker = ["","Noir(aile de corbeau)","Brun","Auburn","Châtain","Roux","Blond vénitien","Blond","Blanc","Poivre & Sel"]
     let arrayEyesColorPicker = ["","Bleus","Marron","Verts","Gris","Rouge"]
     
     @IBOutlet weak var nameTextfield: UITextField!
@@ -32,6 +32,8 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     @IBOutlet weak var eyesColorLb: UILabel!
     @IBOutlet weak var hairsColorPicker: UIPickerView!
     @IBOutlet weak var hairsColorLb: UILabel!
+    @IBOutlet weak var heightSlider: UISlider!
+    @IBOutlet weak var heigtLb: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +48,9 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate, UIPickerVi
         eyesColorPicker.dataSource = self
         hairsColorPicker.dataSource = self
         self.navigationController?.isNavigationBarHidden = false
+        sliderLabel(value: heightSlider.value)
+        initialValues()
+        
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
             closeKeyboard()
@@ -55,7 +60,7 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate, UIPickerVi
         return true
     }
     @IBAction func nameDidEndEditingTxtfield(_ sender: UITextField) {
-        test.firstname = (sender.text != "") ? sender.text! : "sans nom"
+        newPersonRegistered.firstname = (sender.text != "") ? sender.text! : "sans nom"
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
@@ -71,49 +76,60 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
             let selectedRow = arrayEyesColorPicker[row]
-            test.eyesColor = selectedRow
+            newPersonRegistered.eyesColor = selectedRow
         } else {
             let selectedRow = arrayHairsPicker[row]
-            test.hairs = selectedRow
+            newPersonRegistered.hairs = selectedRow
         }
     }
     @IBAction func glassesSwitchPressed(_ sender: UISwitch) {
-        test.glasses = (sender.isOn) ? "oui" : "non"
-//        test.glasses = sender.isOn
+        newPersonRegistered.glasses = (sender.isOn) ? "oui" : "non"
     }
     @IBAction func beardSwitchPressed(_ sender: UISwitch) {
-        test.beard = (sender.isOn) ? "oui" : "non"
-//         test.beard = sender.isOn
+        newPersonRegistered.beard = (sender.isOn) ? "oui" : "non"
     }
     @IBAction func bigSwitchPressed(_ sender: UISwitch) {
-        test.strong = (sender.isOn) ? "oui" : "non"
-//        test.strong = sender.isOn
+        newPersonRegistered.strong = (sender.isOn) ? "oui" : "non"
     }
     @IBAction func smileSwitchPressed(_ sender: UISwitch) {
-        test.smile = (sender.isOn) ? "oui" : "non"
+        newPersonRegistered.smile = (sender.isOn) ? "oui" : "non"
     }
     @IBAction func sexSegmentedPressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
-//        case 1: test.sex = true
-//        case 2: test.sex = false
-        case 1: test.sex = "homme"
-        case 2: test.sex = "femme"
+        case 1: newPersonRegistered.sex = "homme"
+        case 2: newPersonRegistered.sex = "femme"
         default: return
         }
     }
     @IBAction func voiceSegmentedPressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
-//        case 1: test.voice = true
-//        case 2: test.voice = false
-        case 1: test.voice = "grave"
-        case 2: test.voice = "aigüe"
+        case 1: newPersonRegistered.voice = "grave"
+        case 2: newPersonRegistered.voice = "aigüe"
         default: return
         }
     }
     @IBAction func validateNewPerson(_ sender: UIButton) {
-        registerNewPeople(newPerson: test)
+        newPerson().registerNewPeople(newPerson: newPersonRegistered)
     }
     @objc private func closeKeyboard() {
         view.endEditing(true)
     }
+    private func sliderLabel(value: Float){
+        heigtLb.text = "\(Int(value)) cm"
+    }
+    
+    @IBAction func actionOnSlider(_ sender: UISlider) {
+        sliderLabel(value: sender.value)
+        let tall: Int = Int(sender.value)
+        newPersonRegistered.tall = String(tall)
+    }
+    private func initialValues() {
+        newPersonRegistered.sex = "homme"
+        newPersonRegistered.glasses = "non"
+        newPersonRegistered.beard = "non"
+        newPersonRegistered.strong = "non"
+        newPersonRegistered.smile = "non"
+        newPersonRegistered.voice = "grave"
+    }
+    
 }
