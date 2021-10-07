@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A0F8FF4270B99DF00BC3EA3 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A0F8FF3270B99DF00BC3EA3 /* data.json */; };
 		0A0F8FF6270BA03D00BC3EA3 /* QuizzData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0F8FF5270BA03D00BC3EA3 /* QuizzData.swift */; };
+		0A3345CF270F992E00340F22 /* hacker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A3345CE270F992E00340F22 /* hacker.jpg */; };
 		0A6087A926FD128A00FA91EC /* StandardButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6087A826FD128A00FA91EC /* StandardButtonView.swift */; };
 		0AC827A826F33D310005C29C /* NewPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC827A726F33D310005C29C /* NewPersonViewController.swift */; };
 		0AC827B126F37CA70005C29C /* newPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC827B026F37CA70005C29C /* newPersonModel.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		0A0F8FF3270B99DF00BC3EA3 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = data.json; path = DI20/data.json; sourceTree = "<group>"; };
 		0A0F8FF5270BA03D00BC3EA3 /* QuizzData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzData.swift; sourceTree = "<group>"; };
+		0A3345CE270F992E00340F22 /* hacker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hacker.jpg; path = ../../../../../../../Downloads/hacker.jpg; sourceTree = "<group>"; };
 		0A6087A826FD128A00FA91EC /* StandardButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonView.swift; sourceTree = "<group>"; };
 		0AC827A726F33D310005C29C /* NewPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPersonViewController.swift; sourceTree = "<group>"; };
 		0AC827B026F37CA70005C29C /* newPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPersonModel.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		0AEAC85F2706466B00D2938D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0A3345CE270F992E00340F22 /* hacker.jpg */,
 				0AEAC8602706467B00D2938D /* welcomeImage.jpg */,
 			);
 			path = Images;
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A0F8FF4270B99DF00BC3EA3 /* data.json in Resources */,
+				0A3345CF270F992E00340F22 /* hacker.jpg in Resources */,
 				0AEAC8612706467B00D2938D /* welcomeImage.jpg in Resources */,
 				0AE42AF126E25239009506C1 /* LaunchScreen.storyboard in Resources */,
 				0AE42AEE26E25239009506C1 /* Assets.xcassets in Resources */,

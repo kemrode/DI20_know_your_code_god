@@ -34,6 +34,7 @@ class quizzViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         validateBtn.layer.cornerRadius = 35
         self.navigationController?.isNavigationBarHidden = false
         arrayName = self.creatingArrayName()
+        peopleView.image = UIImage(named: "hacker.jpg")
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
